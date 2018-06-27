@@ -6,8 +6,17 @@
         margin-right:-65px;
     }
 
+    &-margins-large {
+        margin-right: -100px;
+    }
+
     &-margins > div{
         padding-right: 65px;
+        box-sizing: border-box;
+    }
+
+    &-margins-large > div {
+        padding-right: 100px;
         box-sizing: border-box;
     }
 
@@ -28,6 +37,11 @@
         &-md-4-larger {
             width: 37%;
         }
+
+        &-md-6 {
+            float: left;
+            width: 50%;
+        }        
 
         &-md-8 {
             float: left;
