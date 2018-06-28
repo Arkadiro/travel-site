@@ -1,6 +1,9 @@
 {
   "name": "travel-site",
   "version": "1.0.0",
+  "scripts": {
+    "build": "webpack"
+  },
   "dependencies": {
     "jquery": "3.2.1",
     "jquery-smooth-scroll": "2.2.0",
@@ -33,6 +36,8 @@
     "postcss-mixins": "6.2.0",
     "postcss-nested": "2.1.2",
     "postcss-simple-vars": "4.1.0",
-    "webpack": "3.8.1"
+    "webpack": "3.8.1",
+    "webpack-cli": "^2.0.9",
+    "lodash": "^4.17.5"
   }
 }
