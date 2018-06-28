@@ -845,10 +845,15 @@ var _StickyHeader = __webpack_require__(4);
 
 var _StickyHeader2 = _interopRequireDefault(_StickyHeader);
 
+var _Modal = __webpack_require__(5);
+
+var _Modal2 = _interopRequireDefault(_Modal);
+
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
 var mobileMenu = new _MobileMenu2.default();
 var stickyHeader = new _StickyHeader2.default();
+var modal = new _Modal2.default();
 //const revealOnScroll = new RevealOnScroll();
 
 new _RevealOnScroll2.default(document.querySelectorAll('.feature-item'), '85%');
@@ -1054,6 +1059,69 @@ var StickyHeader = function () {
 }();
 
 exports.default = StickyHeader;
+
+/***/ }),
+/* 5 */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+
+Object.defineProperty(exports, "__esModule", {
+    value: true
+});
+
+var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
+
+function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
+
+var Modal = function () {
+    function Modal() {
+        _classCallCheck(this, Modal);
+
+        this.openModalButton = document.querySelectorAll('.open-modal');
+        this.modal = document.querySelector('.modal');
+        this.closeModalBtn = document.querySelector('.modal-close');
+        this.events();
+    }
+
+    _createClass(Modal, [{
+        key: 'events',
+        value: function events() {
+            var _this = this;
+
+            //console.log(this.openModalButton);
+            this.openModalButton.forEach(function (e) {
+                return e.addEventListener('click', _this.openModal.bind(_this));
+            });
+            this.closeModalBtn.addEventListener('click', this.closeModal.bind(this));
+            document.addEventListener('keydown', this.keyPressHandler.bind(this));
+        }
+    }, {
+        key: 'openModal',
+        value: function openModal(e) {
+            console.log(this.modal);
+            this.modal.classList.add('modal-visible');
+            e.preventDefault();
+        }
+    }, {
+        key: 'closeModal',
+        value: function closeModal() {
+            this.modal.classList.remove('modal-visible');
+        }
+    }, {
+        key: 'keyPressHandler',
+        value: function keyPressHandler(e) {
+            if (e.keyCode == 27) {
+                this.closeModal();
+            }
+        }
+    }]);
+
+    return Modal;
+}();
+
+exports.default = Modal;
 
 /***/ })
 /******/ ]);
