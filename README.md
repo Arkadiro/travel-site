@@ -13,16 +13,16 @@ Nicely configured GULP + WEBPACK + BABEL project
 
 ## gulp build for prod
 
-  ./dist/index.html minified Html
+  ./docs/index.html minified Html
 
-  ./distdist/styles/ for minified CSS
+  ./docs/styles/ for minified CSS
 
-  ./dist/scripts/ for minified JS
+  ./docs/scripts/ for minified JS
 
-  ./dist/assets/images for compressed Images
+  ./docs/assets/images for compressed Images
   
 ## npm run build to start webpack + babel
 
   webpack output file 'App-bundle.js'
-  
+
   babel preset: ['es2015']
