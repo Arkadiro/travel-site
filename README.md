@@ -26,3 +26,7 @@ Nicely configured GULP + WEBPACK + BABEL project
   webpack output file 'App-bundle.js'
 
   babel preset: ['es2015']
+
+## preview Example
+
+  https://arkadiro.github.io/travel-site/
